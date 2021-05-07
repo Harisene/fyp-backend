@@ -1,15 +1,14 @@
-// var mysql      = require('mysql');
-// var connection = mysql.createConnection({
-//   host     : 'localhost',
-//   user     : 'root',
-//   password : '',
-//   database : 'door',
-// });
-// connection.connect(function(err){
-// if(!err) {
-//     console.log("Database is connected");
-// } else {
-//     console.log(err);
-// }
-// });
-// module.exports = connection; 
+const config = {
+  serverPort: 4000,
+  db: {
+    dbName: "/schools",
+    host: "localhost",
+    port: "27017",
+  },
+  credentials: {
+    userName: "harithsenevi4",
+    password: "Harithaerk",
+  },
+};
+
+module.exports = config;
