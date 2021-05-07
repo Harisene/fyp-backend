@@ -17,18 +17,4 @@ module.exports.login = (req, res) => {
         } else {
             return res.status(404).json({ status: false, message: 'fail' });
         }
-    
-    // connection.query(
-    //     'SELECT * FROM admin WHERE username = ?', body.username, function (error, results, fields) {
-            
-    //         if (!results[0]) {
-    //             return res.status(404).json({ status: false, message: 'Admin record not found.' });
-    //         }
-    //         else if (results[0].password === body.password) {
-    //             return res.status(200).json({ status: true, message: 'success' });
-    //         }
-    //         else {
-    //             return res.status(401).json({ status: false, message: 'Password not match' });
-    //         }
-    //     });
 }
