@@ -4,6 +4,12 @@ const router = express.Router();
 const ctrlAdmin = require("../controllers/admin.controller");
 const getAllSchools = require("../controllers/getAllSchools.controller");
 
+
+
+
+
+const ctrlFood = require("../controllers/food.controller");
+
 router.get("/admin", ctrlAdmin.admin);
 router.post("/login", ctrlAdmin.login);
 
@@ -12,4 +18,15 @@ router.get("/all", (req, res) => {
   getAllSchools.getAllSchools(req, res);
 });
 
+
+
+
+
+
+
+
+
+router.get("/foods/:cctv", (req, res) => {
+  ctrlFood.getFoods(req, res);
+});
 module.exports = router;
