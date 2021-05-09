@@ -11,3 +11,15 @@ module.exports.getGroups = (req, res) => {
     }
   });
 };
+
+module.exports.getAllGroups = (req, res) => {
+  group.find((err, groups) => {
+  if (err) {
+    console.log("Error in group.controller: " + err);
+    res.status(500).send("Something went wrong");
+  } else {
+    console.log(groups.length + " groups found!");
+    res.status(200).json(groups);
+  }
+});
+};

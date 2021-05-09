@@ -32,4 +32,12 @@ router.get("/groups/:cctv", (req, res) => {
   ctrlGroup.getGroups(req, res);
 });
 
+router.get("/foods", (req, res) => {
+  ctrlFood.getAllFoods(req, res);
+});
+
+router.get("/groups", (req, res) => {
+  ctrlGroup.getAllGroups(req, res);
+});
+
 module.exports = router;

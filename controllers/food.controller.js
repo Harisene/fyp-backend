@@ -11,3 +11,15 @@ module.exports.getFoods = (req, res) => {
     }
   });
 };
+
+module.exports.getAllFoods = (req, res) => {
+  food.find((err, foods) => {
+  if (err) {
+    console.log("Error in food.controller: " + err);
+    res.status(500).send("Something went wrong");
+  } else {
+    console.log(foods.length + " foods found!");
+    res.status(200).json(foods);
+  }
+});
+};
