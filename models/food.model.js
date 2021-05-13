@@ -14,7 +14,7 @@ const food = new Schema({
   //   type: [Number],
   //   //required: true,
   // },
-  food_amount: {
+  amount: {
     type: Number,
     //required: true,
   }
