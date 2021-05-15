@@ -3,7 +3,8 @@ const Schema = mongoose.Schema;
 
 const washroom = new Schema({
   date: { type: String, required: true },
+  time: { type: String, required: true },
   gender: { type: String, required: true },
 });
 
-module.exports = mongoose.model("washroom", washroom);
+module.exports = mongoose.model("washrooms", washroom);
