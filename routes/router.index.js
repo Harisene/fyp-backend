@@ -10,6 +10,7 @@ const ctrlGroup = require("../controllers/group.controller");
 const {
   getFaceDetection,
 } = require("../controllers/getFaceDetection.controller");
+const { getVehicle } = require("../controllers/getVehicle.controller");
 
 router.get("/admin", ctrlAdmin.admin);
 router.post("/login", ctrlAdmin.login);
@@ -45,6 +46,10 @@ router.get("/groups", (req, res) => {
 
 router.get("/facedetection", (req, res) => {
   getFaceDetection(req, res);
+});
+
+router.get("/vehicle", (req, res) => {
+  getVehicle(req, res);
 });
 
 module.exports = router;
